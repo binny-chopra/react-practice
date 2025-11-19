@@ -70,6 +70,11 @@ const PasswordGenerator = () => {
                     <label>Symbol</label>
                 </div>
             </div>
+            <ol className="m-4 pl-5 text-left list-decimal list-inside">Concepts covered:
+                <li>useCallback for generating password</li>
+                <li>useCallback for copying password</li>
+                <li>useRef for copying password</li>
+            </ol>
         </div>
     )
 }
