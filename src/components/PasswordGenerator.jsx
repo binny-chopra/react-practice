@@ -7,10 +7,6 @@ const PasswordGenerator = () => {
     const [symbolsAllowed, setSymbolsAllowed] = useState(false);
     const passwordRef = useRef(null);
 
-    useEffect(() => {
-        pswdGenerator();
-    }, [pswdLength, numsAllowed, symbolsAllowed, pswdGenerator])
-
     const pswdGenerator = useCallback(() => {
         const nums = "0123456789";
         const symbols = "!@#$%^&*-_+=[]{}~";
@@ -27,6 +23,10 @@ const PasswordGenerator = () => {
 
         setPswd(generatedPswd)
     }, [pswdLength, numsAllowed, symbolsAllowed])
+
+    useEffect(() => {
+        pswdGenerator();
+    }, [pswdLength, numsAllowed, symbolsAllowed, pswdGenerator])
 
     const handleClick = useCallback(() => {
         passwordRef.current?.select();
